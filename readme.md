@@ -52,3 +52,48 @@ Node es usado para desarrollo Back-End y creación de API's
   Qué establece una relación bidireccional y dínamica entre el servidor y el cliente. Analiza los eventos que occuren y reacciona de forma casi inmediata.
 
 ## 4. El REPL de Node.js
+
+- **Qué significa REPL**
+  REPL singifica
+- Read
+- Eval
+- Print
+- Loop
+  En español sería, el Ciclo de Leer, Evaluar y Mostrar
+  Para ingresar en el REPL, lo hacemos escribiendo en la terminal el comando `node`.
+
+  ![](./assets/imgs/repl.png)
+
+## 5. Primer programa con Node.js
+
+Para ejecutar con Node.js un archivo de JS localmente lo hacemos desde la termina con la palabra reservada node, de la siguiente forma: `node path/fileName.js`
+
+Por ejemplo, tenemos un archivo llamado app.js con una función que saluda
+
+```js
+function saludar(nombre) {
+  return `Hello ${nombre}`;
+}
+
+console.log(saludar("Jorge"));
+```
+
+En la termina escribimos:
+
+```
+node src/app.js
+```
+
+![](./assets/imgs/node-repl.png)
+
+## 6. Modulos de Node.js
+
+- **Qué es un módulo de node.js**
+  Un módulo es una funcionalidad organizada en uno o varios archivos JavaScript que puede ser **reutilizada** en una aplicación.
+
+- **Ventajas de trabajar con módulos**
+- Evitamos repetir código
+- Reutilizamos el código
+- Es más fácil encontrar y corregir bugs
+- Es más fácil modificar el código
+- Es más fácil agregar nueva funcionalidades
