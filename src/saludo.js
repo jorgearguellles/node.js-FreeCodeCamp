@@ -1,5 +1,12 @@
-function saludar(nombre) {
-  return `Hello ${nombre}`;
+function sayHi(name) {
+  return `Hi ${name}!`;
 }
 
-module.exports.saludar = saludar;
+function sayBye(name) {
+  return `Bye bye ${name}!`;
+}
+
+module.exports = {
+  sayHi,
+  sayBye,
+};

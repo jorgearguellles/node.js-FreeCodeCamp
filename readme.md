@@ -97,3 +97,16 @@ node src/app.js
 - Es más fácil encontrar y corregir bugs
 - Es más fácil modificar el código
 - Es más fácil agregar nueva funcionalidades
+
+## 7. Módulos principales de Node.js
+
+Los módulos buit-in o módulos core son los módulos principales que viene instalados en Node.js, es decir, se pueden usar directamente al trabaajr con Node.js, sin instalarlos.
+Son muy utiles para realizar tareas comunes al trabajar con Node.js.
+
+- http
+- https
+- fs (file system)
+- os (operating system)
+- path
+
+## 8. El módule console
