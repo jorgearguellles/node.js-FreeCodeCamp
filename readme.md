@@ -213,10 +213,67 @@ Este módulo contiene funcionalida muy util para trabjar con sistemas de archivo
 Operaciones utiles que podemos realizar con este módulo, tenemos:
 
 - leer
+
+```js
+const fs = require("fs");
+
+fs.readFileSync("index.html", "utf-8", (error, content) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(content);
+  }
+});
+```
+
 - Modificar
+
+```js
+// Añadir contendio al final
+fs.appendFile("index.html", "<p>Hello by Append</p>", (err) => {
+  if (err) {
+    throw err;
+  }
+  console.log("File updated successful");
+});
+```
+
+```js
+// Remplazar todo el contendio por nuevo
+fs.writeFile("index.html", "<p>Hello by Append</p>", (err) => {
+  if (err) {
+    throw err;
+  }
+  console.log("File replaced successful");
+});
+```
+
 - Copiar
 - Eliminar
+
+```js
+const fs = require("fs");
+
+fs.unlink("main.html", (err) => {
+  if (err) {
+    throw err;
+  }
+  console.log("File deleted successful");
+});
+```
+
 - Cambiar nombre
+
+```js
+const fs = require("fs");
+
+fs.rename("index.html", "main.html", (error) => {
+  if (error) {
+    throw error;
+  }
+  console.log("Rename file successful");
+});
+```
 
 Todos los métodos de este módulo son asíncronos por defecto.
 Para volver ún m+etodo síncrono, le agregamos la palabra **sync**
