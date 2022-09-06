@@ -125,4 +125,103 @@ Console es un módulo buit-in que implemnta la funcionalidad similar a la consol
 
 ### 7.3 El módulo OS
 
-- **console.log()**
+- **const os = require("os");**
+
+Este módulo nos permite obtener información sobre el sistema operativa donde se esta ejecutando la aplicación.
+
+Ejemplos:
+
+```js
+console.log(os.type());
+console.log(os.homedir());
+console.log(os.uptime());
+console.log(os.userInfo());
+```
+
+### 7.4 El módulo Timers
+
+El módulo Timers contiene funciones que ejecutan un código despues de cierto periodo de tiempo. Ayuda a simular eventos asíncronos.
+Tres funciones muy utiles son:
+
+- **setTimeout();**
+  Sirve para ejecutar un código luego de un úmero especifico de milisegundos.
+  1 segundo = 1000 milisegundos.
+
+  ```js
+  setTimeout(función a ejecutar, retraso, argumento1, argument2 );
+  ```
+
+  Ejemplo:
+
+  ```js
+  function showTheme(theme) {
+    console.log(`I'm learning ${theme}`);
+  }
+
+  setTimeout(showTheme, 3000, "Node.js");
+
+  function add(a, b) {
+    console.log(a + b);
+  }
+
+  setTimeout(add, 3000, 2, 3);
+  ```
+
+- **setImmediate();**
+  Sirve para ejecutar código asíncrono en la próxima iteración del ciclo de eventos (Lo más pronto posible).
+  La función se va a ejecutar después del código síncrono.
+
+  ```js
+  setImmidiate(función a ejecutar, argumento1, argument2 );
+  ```
+
+  Ejemplo:
+
+  ```js
+  function showTheme(theme) {
+    console.log(`I'm learning ${theme}`);
+  }
+
+  console.log("Before setImmediate");
+  setImmediate(showTheme, "Node.js");
+  setTimeout(showTheme, 3000, "Express.js");
+  console.log("After setImmediate");
+  ```
+
+- **setInterval();**
+  Sirve para ejecutar código un número infinito de veces con un retraso específico de milisegundos.
+
+  ```js
+  setInterval(function, intervalo, arg1, arg2)
+  ```
+
+  ```js
+  function showTheme(theme) {
+    console.log(`I'm learning ${theme}`);
+  }
+
+  console.log("Before setImmediate");
+  setImmediate(showTheme, "Node.js");
+  setTimeout(showTheme, 3000, "Express.js");
+  setInterval(showTheme, 5000, "GO");
+  console.log("After setImmediate");
+  ```
+
+### 7.5 El módulo fs (file system)
+
+Este módulo contiene funcionalida muy util para trabjar con sistemas de archivos.
+Operaciones utiles que podemos realizar con este módulo, tenemos:
+
+- leer
+- Modificar
+- Copiar
+- Eliminar
+- Cambiar nombre
+
+Todos los métodos de este módulo son asíncronos por defecto.
+Para volver ún m+etodo síncrono, le agregamos la palabra **sync**
+
+```js
+fs.rename();
+fs.renameSync();
+```
