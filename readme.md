@@ -109,4 +109,20 @@ Son muy utiles para realizar tareas comunes al trabajar con Node.js.
 - os (operating system)
 - path
 
-## 8. El módule console
+### 7.1 El módule console
+
+Console es un módulo buit-in que implemnta la funcionalidad similar a la consola de un navegador web.
+
+- **console.log()**
+- **console.warm()**
+- **console.error()**
+- **console.assert()**
+- **console.table()**
+
+### 7.2 El módulo process
+
+- **console.log(process)**
+
+### 7.3 El módulo OS
+
+- **console.log()**
