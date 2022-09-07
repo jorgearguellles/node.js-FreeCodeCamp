@@ -296,3 +296,5 @@ fs.renameSync();
   Solo los módulos que tiene un archivos package.json son paquetes.
 - **Qué es una dependencia?**
   Una dependencia es un paquete que otro paquete necesita para funcionar correctamente.
+
+## 8.1 NPM
