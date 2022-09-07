@@ -282,3 +282,17 @@ Para volver ún m+etodo síncrono, le agregamos la palabra **sync**
 fs.rename();
 fs.renameSync();
 ```
+
+# 8. Introducción a NPM
+
+- **Qué es NPM?**
+  Significa Node Package Module.
+  Es el archivo de software más grande del mundo que contiene **paquetes** puedes instalar y usar con Node.js
+- **Qué es un Paquete?**
+  Un paquete es un archivo o directorio descrito por un archivo de pasckage.json
+  El paquete puede ser publicado en el registor de npm.
+- **Qué es un Módulo?**
+  Un módulo es cualquier archivo o directorio en el directorio **node_modules** que puede ser impoirtadom con cualquier **require()**
+  Solo los módulos que tiene un archivos package.json son paquetes.
+- **Qué es una dependencia?**
+  Una dependencia es un paquete que otro paquete necesita para funcionar correctamente.
