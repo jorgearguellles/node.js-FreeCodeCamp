@@ -297,4 +297,10 @@ fs.renameSync();
 - **Qué es una dependencia?**
   Una dependencia es un paquete que otro paquete necesita para funcionar correctamente.
 
-## 8.1 NPM
+## 8.2 Intro a JSON
+
+- **Qué es JSON?**
+  JSON = JavaScript Object Notation
+  JSON es un formato de texto usado para almacenar y transportar información.
+
+Para convertir **JSON a JS** usamos **JSON.parse()** y para convertir de **JS a JSON** usamos **JSON.stringiy()**
