@@ -355,6 +355,56 @@ Las promesas tiene un método **.then()** con el cual podemos decidir qué ocurr
 
 ## 4.4 Práctica de promesas
 
+```js
+const promiseCompleted = true;
+
+const miPromise = new Promise((resolve, reject) => {
+  if (promiseCompleted) {
+    resolve("Promise successful");
+  } else {
+    reject("Promise failed...");
+  }
+});
+
+const handleSuccessPromise = (value) => {
+  console.log(value);
+};
+
+const handleRejectPromise = (errorReason) => {
+  console.log(errorReason);
+};
+
+miPromise.then(handleSuccessPromise, handleRejectPromise);
+```
+
+Ejemplo ordenes de pizzas:
+
+```js
+// Pizzas example
+
+const statusDelivery = () => {
+  const status = Math.random() < 0.5;
+  console.log(status);
+  return status;
+};
+
+const myPizzaDelivery = new Promise((resolve, reject) => {
+  if (statusDelivery) {
+    resolve("Su pedido ha sido exitoso, ya se esta preparando la pizza!");
+  } else {
+    reject("Ha ocurrido un error, por favor vuelva a intentar.");
+  }
+});
+
+myPizzaDelivery
+  .then((confirmationMessage) => {
+    console.log(confirmationMessage);
+  })
+  .then(null, (errorMessage) => {
+    console.log(errorMessage);
+  });
+```
+
 ## 4.5 .catch()
 
 ## 4.6 Encadenar promesas y Async y Await
