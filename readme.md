@@ -539,6 +539,24 @@ Las respuestas HHTP tiene la siguiente estructura:
 
 ## 5.6 Tu primer servidor con Node.js
 
+- **Qué es el puerto?**
+  El puerto es una ubicación virtual del sistema operativo en la cual se puede acceder a una aplicación o a un proceso especifico que se está ejecutando en ese puerto.
+
+  ```js
+  const http = require("http");
+
+  const server = http.createServer((req, res) => {
+    console.log("New request");
+    res.end("Hello World!");
+  });
+
+  const port = 3000;
+
+  server.listen(port, () => {
+    console.log(`Server listening http://localhost:${port}`);
+  });
+  ```
+
 ## 5.7 req y res
 
 ## 5.8 Estructura de una URL
