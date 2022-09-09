@@ -488,15 +488,54 @@ async function realizarPedido(producto) {
 
 ## 5.1 Modelo cliente-servidor
 
-....
+- **Qué es el módelo CLiente-Servidor?**
+  El Módelo Cliente-Servidor es un Módelo que usamos para acceder a internet y obtener los recursos e información.
+  ![](./assets/imgs/mcs.png)
+- **Qué es el Cliente?**
+  Un Cliente es el navegador desde el cual se realizan solicitudes a un servidor
+- **Qué es el Servidor?**
+  Un Servidor es un porgrama que se ejecuta en un servidor físico para ofrecer un servicio al cliente. Envia informaicón.
+
+El protocolo HTTP define el formato de los mensajes enviados entre el Cliente y el Servidor.
+HTTP significa por sus siglas en ingles **H**yper**T**ext **T**ransfer **P**rotocol.
+En español Protocolo de transferencia de hipertexto.
+
+- **Qué es un Protocolo?**
+  Un portocolo es un conjunto de reglas que permiten transmitir información entre dispositivos de una red.
 
 ## 5.2 Solicitudes HTTP
 
+Una **solicitud HPPT / HTTP request** esta conformada por los siguientes elementos:
+
+- Métodos HTTP
+- Camino (Path)
+- Versión de HTTP
+- Cabeceras (Headers): Proveen información adicional sobre la solicitud.
+- Cuerpo (Body): Contiene la información que debe ser enviar al servidor para procesar la solicitud. No se incluye en todas la solicitudes. Solo en aquellas que requieran enviar información, por ejemplo: POST, PUT
+
 ## 5.3 Métodos HTTP
+
+Un método HTTP es un verbo o sustantivo que indica la intención de la solicitud.
+
+- **GET:** es un verbo usado para **solicitar** un recurso especifico.
+- **POST:** es un verbo para **crear** un recurso en especifico.
+- **PUT:** es un verbo para **modificar** un recurso en especifico.
+- **DELETE:** es un verbo para **eliminar** un recurso en especifico.
 
 ## 5.4 Respuestas HTTP
 
+Las respuestas HHTP tiene la siguiente estructura:
+
+- Código de estado
+- Texto de estado
+- Versión del HTTP
+- Cabeceras (Headers): Son opcionales y proveen información adicional sobre la respuesta.
+- Cuerpo (Body): Contiene la información que debe ser enviar desde el servidor hacia el cliente.
+
 ## 5.5 Códigos de estado HTTP
+
+- [http.cat.status](https://http.cat/)
+- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 ## 5.6 Tu primer servidor con Node.js
 
