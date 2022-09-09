@@ -304,3 +304,57 @@ fs.renameSync();
   JSON es un formato de texto usado para almacenar y transportar información.
 
 Para convertir **JSON a JS** usamos **JSON.parse()** y para convertir de **JS a JSON** usamos **JSON.stringiy()**
+
+# 4. Eventos y JavaScipt asíncrono
+
+## 4.1 Eventos en Node.js
+
+- **Qué es un evento?**
+  Un evento es una acción que se realiza en la aplicación.
+  Tmabien podemos definir eventos que se desencadenan y ejecutan internamente en el servidor.
+- **Qué es un Emitter(Emizor)**
+  Un emitter es un **Objeto** que **emite eventos** nombrados y llaman a funciones especificas cuando ocurren.
+  Los **Emitters** son instancias de la clase **EventEmitter**
+  Tienen un método **.on()** para asociar una función al evento, esa función se ejecuta cuando ocurre el evento. Dichas funciones se conocen como **Event listener** o **Event handler**
+
+## 4.2 Módulo events
+
+El módulo events nos permite:
+
+- Definir para poder decir que va a ocurrir cuando el evento ocurra.
+- Emitir para crear esos eventos
+- Escuchar para saber cuando ocurren
+
+```js
+const EventEmitter = require("events");
+
+const emisorProductos = new EventEmitter();
+
+emisorProductos.on("compra", (total) => {
+  console.log("Se realizo una compra por: $" + total);
+});
+
+emisorProductos.emit("compra", 500);
+
+// --- freeCodeCamp/node.js ‹main* M?› » node app.js
+// Se realizo una compra por: $500
+```
+
+## 4.3 Promesas en JavaScript
+
+- **Qué es una Promesa?**
+  Una promesa es un Objeto de JS que representa el eventual resultado o error de una operación asíncrona.
+  Una promesa tiene 3 estados posibles:
+  ![](./assets/imgs/promise-state.png)
+  Ese objeto de la promesa se asocia a una **Callback function** o funcion de respuesta.
+
+- **Qué es una función callback?**
+  Una función callback es una función que se pasa a otra función como argumento y luego se ejecuta dentro de la función externa.
+
+Las promesas tiene un método **.then()** con el cual podemos decidir qué ocurre cuando se completa la promesa de manera éxitosa o errada.
+
+## 4.4 Práctica de promesas
+
+## 4.5 .catch()
+
+## 4.6 Encadenar promesas y Async y Await
