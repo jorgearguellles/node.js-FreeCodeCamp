@@ -407,4 +407,103 @@ myPizzaDelivery
 
 ## 4.5 .catch()
 
+```js
+// Pizzas example
+
+const statusDelivery = () => {
+  return Math.random() > 0.05;
+};
+
+const myPizzaDelivery = new Promise((resolve, reject) => {
+  if (statusDelivery) {
+    resolve("Su pedido ha sido exitoso, ya se esta preparando la pizza!");
+  } else {
+    reject("Ha ocurrido un error, por favor vuelva a intentar.");
+  }
+});
+
+const handleSuccess = (confirmationMessage) => {
+  console.log(confirmationMessage);
+};
+
+const handleError = (errorMessage) => {
+  console.log(errorMessage);
+};
+
+myPizzaDelivery.then(handleSuccess).catch(handleError);
+```
+
 ## 4.6 Encadenar promesas y Async y Await
+
+```js
+function ordenarPedido(producto) {
+  return new Promise((resolve, reject) => {
+    console.log(`Ordenando: ${producto} de FreeCodeCamp`);
+    setTimeout(() => {
+      if (producto === "taza") {
+        resolve("Ordenando una taza de FreeCodeCamp");
+      } else {
+        reject("Taza de FreeCodeCamp no disponible");
+      }
+    }, 2000);
+  });
+}
+
+function procesarPedido(respuesta) {
+  return new Promise((resolve, reject) => {
+    console.log("Procesando respuesta...");
+    console.log(`La respuesta fue: "${respuesta}"`);
+    setTimeout(() => {
+      resolve("Gracias por tu compra. Disfruta tu producto de FreeCodeCamp");
+    }, 4000);
+  });
+}
+// Promises Chaining ================================
+ordenarPedido("taza")
+  .then((respuesta) => {
+    console.log("Respuesta recibida");
+    return procesarPedido(respuesta);
+  })
+  .then((respuestaProcesada) => {
+    console.log(respuestaProcesada);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+// Async Await ======================================
+async function realizarPedido(producto) {
+  try {
+    const respuesta = await ordenarPedido(producto);
+    console.log("Respuesta recivida");
+    const respuestaProcesada = await procesarPedido(respuesta);
+    console.log(respuestaProcesada);
+  } catch (error) {
+    console.log(error);
+  }
+}
+```
+
+# 5 HTTP y rutas en Node.js
+
+## 5.1 Modelo cliente-servidor
+
+....
+
+## 5.2 Solicitudes HTTP
+
+## 5.3 Métodos HTTP
+
+## 5.4 Respuestas HTTP
+
+## 5.5 Códigos de estado HTTP
+
+## 5.6 Tu primer servidor con Node.js
+
+## 5.7 req y res
+
+## 5.8 Estructura de una URL
+
+## 5.9 El módulo url
+
+## 5.10 Routing en Node.js
