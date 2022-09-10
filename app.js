@@ -1,14 +1,10 @@
-const http = require("http");
+const miUrl = new URL(
+  "https://www.ejemplo.org/cursos/programacion?ordenar=vistas&nivel=1"
+);
 
-const server = http.createServer((req, res) => {
-  console.log("===> req()");
-  console.log(req.url);
-  console.log(req.method);
-  res.end("Hello World!");
-});
-
-const port = 3000;
-
-server.listen(port, () => {
-  console.log(`Server listening http://localhost:${port}`);
-});
+console.log("hostname:", miUrl.hostname);
+console.log("pathname:", miUrl.pathname);
+console.log("search:", miUrl.search);
+console.log("searchParams:", miUrl.searchParams);
+console.log("searchParams:", miUrl.searchParams.get("ordenar"));
+console.log("searchParams:", miUrl.searchParams.get("nivel"));

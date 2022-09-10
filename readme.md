@@ -559,7 +559,83 @@ Las respuestas HHTP tiene la siguiente estructura:
 
 ## 5.7 req y res
 
+- req
+
+```js
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  console.log("===> req()");
+  console.log(req.url);
+  console.log(req.method);
+  console.log(req.headers);
+  console.log(req.body);
+  res.end("Hello World!");
+});
+
+const port = 3000;
+
+server.listen(port, () => {
+  console.log(`Server listening http://localhost:${port}`);
+});
+```
+
+- res
+
+```js
+// To set Header a see it
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  console.log("===> res()");
+  res.setHeader("content-type", "application/json");
+  console.log(res.getHeader());
+  res.end("Response done");
+});
+
+const port = 3000;
+
+server.listen(port, () => {
+  console.log(`Server listening http://localhost:${port}`);
+});
+```
+
 ## 5.8 Estructura de una URL
+
+- **Qué es una URL?**
+  URL significa: **U**niform **R**esource **L**ocator. En español seria Localizador Uniforme de Recursos.
+  Una URL es una dirección hacia un recurso en la web. Puede verse tambien, como un mapa en nuestro servicodr hacia el recurso.
+
+- **Qué es un Subdominio?**
+  Un subdominio es información adicional agregada al incio del dominio de una página web.
+  Permite a los sitios web organizar y separar la información para distintos propositos.
+
+- **Qué es el Dominio?**
+  El dominio es la referencia unica a un sitio web en internet.
+
+- **Qué es el Dominio de orden superior?**
+  TLD: Top Level Domain
+
+- **Qué es el path?**
+  El path o camino representa el archivo directorio en el servidor web.
+  Puede tener parametros para personalizarlo y hay dos tipos de path.
+  - Parametros de ruta: Estos parametros son parte de la URL y se separan con "/"
+  - Parametros de consulta o Query: No hacen parte de la URL. Son parametros usados para obtener contenido dínamica.
+    Tienen estructura ?Clave=Valor: `?q=curso+de+node` y si son varios, se separan con el simbolo "&" `?q=curso+de+node&id=22454``
+    Normalmente los Query Params se usa para filtrar peticiones GET para obtener recursos especificos.
+
+```js
+const miUrl = new URL(
+  "https://www.ejemplo.org/cursos/programacion?ordenar=vistas&nivel=1"
+);
+
+console.log("hostname:", miUrl.hostname);
+console.log("pathname:", miUrl.pathname);
+console.log("search:", miUrl.search);
+console.log("searchParams:", miUrl.searchParams);
+console.log("searchParams:", miUrl.searchParams.get("ordenar"));
+console.log("searchParams:", miUrl.searchParams.get("nivel"));
+```
 
 ## 5.9 El módulo url
 
