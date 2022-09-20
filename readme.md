@@ -663,7 +663,40 @@ console.log("searchParams:", miUrl.searchParams.get("nivel"));
 
 ## 7.1 Introducción a Express
 
+- **Qué es Express.js?**
+  Es el framewrok más popular de Node.js para crear applicaciones en Node.js (servidores y APIs)
+- **Qué caracteristicas tiene Express.js**
+  - Mecanismo para manejar el Routing
+  - Enfocado en alto rendimiento
+  - Permite desarrollar aplicaciones de Node.js más rápido, claro y con código conciso.
+
 ## 7.2 Express - Conceptos importantes
+
+- **CRUD**
+  Operaciones básicas que se pueden hacer con la información almacenada en la base de datos.
+  CRUD significa:
+  | Ingles | Español | Método HTTP |
+  | :---: | :---: | :---: |
+  | **C**reate | Crear | POST |
+  | **R**ead | Leer | GET |
+  | **U**pdate | Actualizar | PUT |
+  | **D**elete | Eliminar | DELETE |
+
+- **API**
+  API significa **A**pplication **P**rogramming **I**nterface
+  Es un tipo de interfaz de software que permite que dos o más programas se comuniquen entre sí.
+  Una API nos permite que un software que ofrezca servicios a otros softwares.
+  Una API no es usada directamente por el usuario final, sino, por el programador que usa la API para implementar su programa.
+  ![](./assets/imgs/api-review.png)
+- **REST**
+  REST significa: **RE**presentational **S**tate **T**ransfer.
+  REST es un estilo de arquitectura de software para sistemas hipermedia distribuidos como la World Wide Web.
+  Una RESTful API es una API básada en la arquitectura REST
+- **?**
+- **?**
+- **?**
+- **?**
+- **?**
 
 ## 7.3 Crear un proyecto con Express
 
