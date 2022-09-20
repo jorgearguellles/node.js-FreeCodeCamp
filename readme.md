@@ -640,3 +640,43 @@ console.log("searchParams:", miUrl.searchParams.get("nivel"));
 ## 5.9 El módulo url
 
 ## 5.10 Routing en Node.js
+
+# 6. Nodemon
+
+- **Qué es nodemon?**
+  Nodemon es una herramienta que reinicia la applicación de Node.js cuando detecta algún cambio.
+
+  ```js
+  const http = require("http");
+
+  const server = http.createServer((res, req) => {
+    res.end("Hello World");
+  });
+
+  const PORT = 3001;
+  server.listen(PORT, () => {
+    console.log("Server listen on Port:" + PORT);
+  });
+  ```
+
+# 7 Express.js
+
+## 7.1 Introducción a Express
+
+## 7.2 Express - Conceptos importantes
+
+## 7.3 Crear un proyecto con Express
+
+## 7.4 Primeros pasos con Express
+
+## 7.5 Agregar rutas en Express
+
+## 7.6 Parámetros de Ruta
+
+## 7.7 Parámetros query
+
+## 7.8 Routers en Express
+
+## 7.9 Routers en distintos archivos
+
+## 7.10 POST, PUT, PATCH y DELETE
